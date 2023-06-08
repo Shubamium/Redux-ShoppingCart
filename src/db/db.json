@@ -1,0 +1,254 @@
+{
+    "products": [
+      {
+        "id": "1",
+        "name": "Elegant Dress",
+        "category": "Clothing",
+        "description": "This elegant dress is perfect for special occasions.",
+        "price": 89.99,
+        "variants": [
+          {
+            "color": "Red",
+            "size": "Small"
+          },
+          {
+            "color": "Blue",
+            "size": "Medium"
+          },
+          {
+            "color": "Green",
+            "size": "Large"
+          }
+        ],
+        "imageSrc": "path/to/elegant_dress.jpg"
+      },
+      {
+        "id": "2",
+        "name": "Sports Shoes",
+        "category": "Footwear",
+        "description": "These comfortable sports shoes are suitable for various activities.",
+        "price": 59.99,
+        "variants": [
+          {
+            "color": "Black",
+            "size": "9"
+          },
+          {
+            "color": "White",
+            "size": "10"
+          },
+          {
+            "color": "Gray",
+            "size": "11"
+          }
+        ],
+        "imageSrc": "path/to/sports_shoes.jpg"
+      },
+      {
+        "id": "3",
+        "name": "Vintage Watch",
+        "category": "Accessories",
+        "description": "This vintage watch adds a touch of class to any outfit.",
+        "price": 129.99,
+        "variants": [
+          {
+            "color": "Silver",
+            "size": "One Size"
+          },
+          {
+            "color": "Gold",
+            "size": "One Size"
+          }
+        ],
+        "imageSrc": "path/to/vintage_watch.jpg"
+      },
+      {
+        "id": "4",
+        "name": "Stylish Sunglasses",
+        "category": "Accessories",
+        "description": "These stylish sunglasses provide both protection and fashion.",
+        "price": 39.99,
+        "variants": [
+          {
+            "color": "Black",
+            "size": "One Size"
+          },
+          {
+            "color": "Brown",
+            "size": "One Size"
+          },
+          {
+            "color": "Silver",
+            "size": "One Size"
+          }
+        ],
+        "imageSrc": "path/to/stylish_sunglasses.jpg"
+      },
+      {
+        "id": "5",
+        "name": "Leather Handbag",
+        "category": "Accessories",
+        "description": "This leather handbag is perfect for carrying your essentials in style.",
+        "price": 149.99,
+        "variants": [
+          {
+            "color": "Black",
+            "size": "One Size"
+          },
+          {
+            "color": "Brown",
+            "size": "One Size"
+          }
+        ],
+        "imageSrc": "path/to/leather_handbag.jpg"
+      },
+      {
+        "id": "6",
+        "name": "Classic T-Shirt",
+        "category": "Clothing",
+        "description": "This classic t-shirt is a wardrobe staple for everyday wear.",
+        "price": 19.99,
+        "variants": [
+          {
+            "color": "White",
+            "size": "Small"
+          },
+          {
+            "color": "Black",
+            "size": "Medium"
+          },
+          {
+            "color": "Gray",
+            "size": "Large"
+          }
+        ],
+        "imageSrc": "path/to/classic_tshirt.jpg"
+      },
+      {
+        "id": "7",
+        "name": "Casual Sneakers",
+        "category": "Footwear",
+        "description": "These casual sneakers offer both comfort and style for your daily activities.",
+        "price": 79.99,
+        "variants": [
+          {
+            "color": "White",
+            "size": "8"
+          },
+          {
+            "color": "Black",
+            "size": "9"
+          },
+          {
+            "color": "Gray",
+            "size": "10"
+          }
+        ],
+        "imageSrc": "path/to/casual_sneakers.jpg"
+      },
+      {
+        "id": "8",
+        "name": "Statement Necklace",
+        "category": "Accessories",
+        "description": "This statement necklace adds a touch of glamour to any outfit.",
+        "price": 49.99,
+        "variants": [
+          {
+            "color": "Gold",
+            "size": "One Size"
+          },
+          {
+            "color": "Silver",
+            "size": "One Size"
+          }
+        ],
+        "imageSrc": "path/to/statement_necklace.jpg"
+      },
+      {
+        "id": "9",
+        "name": "Slim Fit Jeans",
+        "category": "Clothing",
+        "description": "These slim fit jeans are a versatile addition to your denim collection.",
+        "price": 69.99,
+        "variants": [
+          {
+            "color": "Blue",
+            "size": "28Wx30L"
+          },
+          {
+            "color": "Black",
+            "size": "30Wx32L"
+          },
+          {
+            "color": "Gray",
+            "size": "32Wx34L"
+          }
+        ],
+        "imageSrc": "path/to/slim_fit_jeans.jpg"
+      },
+      {
+        "id": "10",
+        "name": "Cozy Sweater",
+        "category": "Clothing",
+        "description": "This cozy sweater is perfect for chilly weather and comfortable lounging.",
+        "price": 59.99,
+        "variants": [
+          {
+            "color": "Red",
+            "size": "Small"
+          },
+          {
+            "color": "Gray",
+            "size": "Medium"
+          },
+          {
+            "color": "Navy",
+            "size": "Large"
+          }
+        ],
+        "imageSrc": "path/to/cozy_sweater.jpg"
+      },
+      {
+        "id": "11",
+        "name": "Bohemian Maxi Dress",
+        "category": "Clothing",
+        "description": "This bohemian maxi dress is perfect for a relaxed and stylish look.",
+        "price": 79.99,
+        "variants": [
+          {
+            "color": "Floral",
+            "size": "Small"
+          },
+          {
+            "color": "Striped",
+            "size": "Medium"
+          },
+          {
+            "color": "Solid",
+            "size": "Large"
+          }
+        ],
+        "imageSrc": "path/to/bohemian_maxi_dress.jpg"
+      },
+      {
+        "id": "12",
+        "name": "Leather Wallet",
+        "category": "Accessories",
+        "description": "This leather wallet is both functional and stylish for everyday use.",
+        "price": 39.99,
+        "variants": [
+          {
+            "color": "Black",
+            "size": "One Size"
+          },
+          {
+            "color": "Brown",
+            "size": "One Size"
+          }
+        ],
+        "imageSrc": "path/to/leather_wallet.jpg"
+      }
+    ]
+}
+  
+
