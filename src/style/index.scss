@@ -1,7 +1,24 @@
 body {
-    background-color: blanchedalmond;
+    // background-color: blanchedalmond;
     // margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
  
+
+main{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+.product-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1em;
+}
+
+.product{
+    background-color: rgba(243, 240, 240, 0.262);
+    border: 1px solid rgba(140, 140, 140, 0.139);
+}

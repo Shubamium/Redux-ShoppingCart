@@ -1,21 +1,19 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux"
 import { cartActions } from "../redux/features/cart/cartSlice";
-
 function Listing() {
 
     const products = useSelector((state)=> state.products);
     const itemInCart = useSelector((state)=> state.cart.length);
     return (
-        <div>
-            <p>Item in cart:{itemInCart}</p>
-            {products.length}
-            {products && products.map((product)=>{
-                return (
-                    <ProductList product={product} key={product.id}></ProductList>
-                )
-            })}
-        </div>
+        <>
+            {/* {products.length} */}
+            <div className="product-list">
+                    {products.map((product)=>{
+                        return <ProductList product={product}></ProductList>
+                    })}
+            </div>
+        </>
     )
 }
 
@@ -39,7 +37,7 @@ function ProductList({product}){
         }
     }
     return (
-        <div className="product-list">
+        <div className="product">
             <img src={product.imageSrc} alt="" />
             <h2>{product.name}</h2>
             <p>{product.description}</p>
