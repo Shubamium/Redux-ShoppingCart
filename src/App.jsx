@@ -12,11 +12,14 @@ function App() {
     return (
       <div>
           <header>
-            <h2>Redux Shopping Cart Example</h2>
-            <nav>
-                <Link to={'/'}>Home</Link>
-                <Link to={'/cart'}>Cart</Link>
-            </nav>
+            <div className="confine">
+              <h1 className='title'>Redux <span>Shopping Cart</span></h1>
+              
+              <nav>
+                  <Link className='nav-link' to={'/'}>Home</Link>
+                  <Link className='nav-link' to={'/cart'}>Cart</Link>
+              </nav>
+            </div>
           </header>
           <main>
              <Outlet/>

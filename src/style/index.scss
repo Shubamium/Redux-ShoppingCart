@@ -30,3 +30,43 @@ main{
     background-color: rgba(243, 240, 240, 0.262);
     border: 1px solid rgba(140, 140, 140, 0.139);
 }
+
+
+header{
+    background-color: rgba(128, 128, 128, 0.277);
+    margin-bottom: 1em;
+    padding: 1.2em;
+    .confine{
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .title{
+        font-size: 1.2rem;
+        color: rgb(105, 93, 93);
+        span{
+            font-weight: 300;
+        }
+    }
+    nav{
+        display: flex;
+        gap: 2em;
+        align-items: center;
+        .nav-link{
+            color: rgb(97, 94, 94);
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+            text-decoration: none;
+            transition: all 250ms ease;
+            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.243);
+
+            &:hover{
+                scale: 1.04;
+                color: white;
+                font-weight: bold;
+            }
+        }
+
+    }
+}
