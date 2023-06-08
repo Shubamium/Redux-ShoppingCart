@@ -132,6 +132,27 @@ header{
                 font-weight: bold;
                 color: white;
             }
+            position: relative;
+            .item-incart{
+                position: absolute;
+                background-color: rgb(87, 83, 83);
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                font-size:1rem;
+                font-weight: bold;
+                bottom: 30%;
+                left: 85%;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                scale: .8;
+                padding: .8em .9em 1em 1em;
+                text-align: center;
+                color: rgb(243, 239, 239);
+            }
         }
 
     }
