@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux"
 import { cartActions } from "../redux/features/cart/cartSlice";
+import { json } from "react-router-dom";
 
 const Cart = () => {
     const cart = useSelector((state) => state.cart);
@@ -29,17 +30,17 @@ function CartItemDisplayer({data}) {
     return (
         <div className="cart-item">
             <div className="img">
-                <img src="" alt="" className="product-img" />
+                <img src="https://images.squarespace-cdn.com/content/v1/5bf4bf814611a019a7c475f0/1562038085083-DLUD125WWPOUTGYD8Q60/ke17ZwdGBToddI8pDm48kHH9S2ID7_bpupQnTdrPcoF7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0nQwvinDXPV4EYh2MRzm-RRB5rUELEv7EY2n0AZOrEupxpSyqbqKSgmzcCPWV5WMiQ/product%2Bphotography" alt="" className="product-img" />
             </div>
             <div className="center">
                 <h2 className="name">{productData.name}</h2>
-                {data.qty.map(variantList => {
+                {data.qty.map((variantList,index) => {
                     const variantData = productData.variants[variantList.variant];
                     return (
-                        <div>
-                            {/* <h3>Variant {variantData.color}</h3> */}
-                            {/* <p>Size {variantData.size}</p> */}
-                            <p>Amount: {variantList.amount}</p>
+                        <div className="shopping-cart" key={index}>
+                            <h3>{variantData.color}</h3>
+                            <p>Size {variantData.size}</p>
+                            <p> {variantList.amount}</p>
                         </div>
                     )
                 }
