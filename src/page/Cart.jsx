@@ -9,7 +9,7 @@ const Cart = () => {
             <div className="cart-listing">
                 {cart && cart.map((data)=>{
                     return (
-                      <CartItemDisplayer   data={data} />
+                      <CartItemDisplayer key={data.productId}  data={data} />
                     )
                 })}
                 {cart.length === 0 && <p>There's no item in your cart</p>}
@@ -24,15 +24,34 @@ const Cart = () => {
 function CartItemDisplayer({data}) {
 
     const dispatch = useDispatch();
+    const productData = useSelector((state) => state.products[data.productId]);
+   
     return (
-        <div key={data.productId}>
-            <h2>Product {data.productId}</h2>
-            {data.qty.map(variantList => <div>
-                    <h3>Variant {variantList.variant}</h3>
-                    {/* <p>Size {variantList.size}</p> */}
-                    <p>Amount: {variantList.amount}</p>
-                                    </div>
-            )}<button onClick={() => {dispatch(cartActions.remove(data.productId));}}>Remove from cart</button>
+        <div className="cart-item">
+            <div className="img">
+                <img src="" alt="" className="product-img" />
+            </div>
+            <div className="center">
+                <h2 className="name">{productData.name}</h2>
+                {data.qty.map(variantList => {
+                    const variantData = productData.variants[variantList.variant];
+                    return (
+                        <div>
+                            {/* <h3>Variant {variantData.color}</h3> */}
+                            {/* <p>Size {variantData.size}</p> */}
+                            <p>Amount: {variantList.amount}</p>
+                        </div>
+                    )
+                }
+                )}
+            </div>
+            <button className="btn" onClick={() => {dispatch(cartActions.remove(data.productId));}}>Remove from cart</button>
+            <div className="end">
+                <div className="total">
+                        <p>Sub total:</p>
+                        <h2 className="price">$222</h2>
+                </div>
+            </div>
         </div>
     );
 }

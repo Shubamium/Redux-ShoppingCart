@@ -8,6 +8,10 @@ body {
 
 }
  
+@mixin panel{
+    background-color: rgba(243, 240, 240, 0.25);
+    border: 1px solid rgba(140, 140, 140, 0.139);
+}
 .btn{
     color: white;
     border: none;
@@ -42,8 +46,7 @@ main{
 }
 
 .product{
-    background-color: rgba(243, 240, 240, 0.25);
-    border: 1px solid rgba(140, 140, 140, 0.139);
+    @include panel();
     padding: .9em 1em;
     transition: all 250ms ease;
     &:hover{
@@ -93,6 +96,22 @@ main{
             font-family: 'Work Sans',sans-serif;
             opacity: .6;
             font-weight: 300;
+        }
+            .name{
+            font-size: 1rem;
+            color: rgb(93, 88, 88);
+            font-weight: 600;
+            background-color: rgba(218, 218, 218, 0.283);
+            border-radius: 1em;
+        }
+        .category{
+            font-size: .6rem;
+            opacity: .3;
+            margin-bottom:1em;
+        }
+        .desc{
+            opacity: .45;
+            font-size: .8rem;
         }
     }
 }
@@ -164,4 +183,41 @@ header{
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 2em;
+   
+    .cart-listing{
+        background-color: rgba(232, 230, 230, 0.123);
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 1em;
+        .cart-item{
+            padding: 1em;
+            @include panel();
+            min-height: 160px;
+            display: grid;
+            grid-template-columns: 100px 1fr 80px;
+            .name{
+                font-size: 1rem;
+                color: rgb(93, 88, 88);
+                font-weight: 600;
+                background-color: rgba(218, 218, 218, 0.283);
+                border-radius: 1em;
+            }
+            .category{
+                font-size: .6rem;
+                opacity: .3;
+                margin-bottom:1em;
+            }
+            .desc{
+                opacity: .45;
+                font-size: .8rem;
+            }
+            .price{
+                // font-weight: bold;
+                font-family: 'Work Sans',sans-serif;
+                opacity: .6;
+                font-weight: 300;
+            }
+        }
+    }
 }
