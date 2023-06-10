@@ -67,22 +67,10 @@ function ProductList({product}){
                 <h2 className="name">{product.name}</h2>
                 <p className="category">{product.category}</p>
                 <p className="desc">{product.description}</p>
-                {/* <div className="variants">
-                    {product.variants.map((variant,index)=>{
-                        return <div key={index}>
-                            <h4>Variant {index + 1}</h4>
-                            <p>{variant.color}</p>
-                            <p>{variant.size}</p>
-                        </div>
-                    })}
-                </div> */}
-               
             </div>
             <form className="prod-footer" onSubmit={(e)=>{e.preventDefault()}}>
                     <p className="price">${product.price}</p>
-                    {/* <label htmlFor="qty">Qty:</label> */}
-                    {/* <input type="number" onChange={(e)=>setQty(e.target.value)} value={qty} min={1} max={99} name="qty" /> */}
-                    <button className="btn cart-btn" onClick={handleAdd}>Add to cart</button>
+                    <Link to={`/product/${product.id}`}><button className="btn cart-btn" >Add to cart</button></Link>
             </form>
             {/* <p>{product.variants[0].size}</p> */}
         </div>

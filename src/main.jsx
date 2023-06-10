@@ -6,6 +6,7 @@ import store from './redux/app/store.js'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Listing from './page/listing.jsx'
 import Cart from './page/Cart.jsx'
+import DetailedProduct from './page/DetailedProduct.jsx'
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path:'/category/:category',
         element:<Listing/>
+      },
+      {
+        path:'/product/:prodId',
+        element:<DetailedProduct/>
       }
     ]
   }
