@@ -189,9 +189,11 @@ header{
 .listing{
     display: grid;
     grid-template-columns: 150px 4fr;
-    .category{
+    .category-nav{
         text-align: right;
         padding: .9em;
+        // text-align: right;
+        
         h2{
             opacity: .6;
             margin: .4em 0em;

@@ -38,9 +38,16 @@ const cartSlice = createSlice({
         },
         decrement:(state,action)=>{
             const productId = state.findIndex((cart)=>cart.productId === action.payload.id);
-            state[productId].qty[action.payload.variant].amount -= 1;
-            if(state[productId].qty[action.payload.variant] <= 0){
-                state[productId].qty[action.payload.variant] = 0;
+            const thisVariant = state[productId].qty[action.payload.variant];
+            const qty = state[productId].qty;
+            thisVariant.amount -= 1;
+            if(thisVariant.amount <= 0){
+                // thisVariant.amount = 0;
+                qty.splice(action.payload.variant,1);
+                if(qty.length <= 0){
+                    console.log('spliced');
+                    state.splice(productId,1);
+                }               
             }
         }
     }

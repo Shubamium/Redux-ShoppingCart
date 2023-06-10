@@ -13,7 +13,7 @@ function Listing() {
     
     return (
         <div className="listing">
-            <div className="category">
+            <div className="category-nav">
                 <h2>Category</h2>
                 <ul className="cat-list">
                     <li>
