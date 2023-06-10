@@ -68,7 +68,7 @@ main{
         max-height: 100%;
         display: blocks;
         // /height: 100%;
-        object-fit: cover;
+        object-fit: cover ;
         border: 1px solid rgba(128, 128, 128, 0.069);
     }
     display: flex;
@@ -189,6 +189,26 @@ header{
 .listing{
     display: grid;
     grid-template-columns: 150px 4fr;
+    .category{
+        text-align: right;
+        padding: .9em;
+        h2{
+            opacity: .6;
+            margin: .4em 0em;
+        }
+        .cat-list li{
+            list-style: none;
+            padding: .1em;
+            &:hover{
+                scale: 1.02;
+            }
+            a { 
+                text-decoration: none;
+                color: rgb(162, 162, 160);
+                // margin: .4em;
+            }
+        }
+    }
 }
 .cart{
     display: grid;

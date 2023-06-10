@@ -4,12 +4,15 @@ import { json } from "react-router-dom";
 import { useMemo } from "react";
 
 
-const getSubTotal = (cartItem,productData)=>{
+function getSubTotal(cartItem,productData){
     let price = 0;
     cartItem.qty.forEach((variant)=>{
-        price += productData.price * variant.amount;
+       if(!isNaN(variant.amount)){
+            price += parseFloat(productData.price) * variant.amount;
+       }
     })
-    return price;
+    return price.toFixed(2);
+
 }
 
 
@@ -20,12 +23,12 @@ const Cart = () => {
     const toRender = [...cart].reverse();
 
     const getPriceTotal = () => {
-        let price = 0;
+        let priceTotal = 0;
         cart.forEach((item)=>{
-            let itemPrice = getSubTotal(item,productData[item.productId - 1]);
-            price += itemPrice;
+            let itemPrice = parseFloat(getSubTotal(item,productData[item.productId - 1]));
+            priceTotal += itemPrice;
         })
-        return price.toFixed(2);
+        return priceTotal.toFixed(2);
     }
     const price = useMemo(()=>{return getPriceTotal()},[cart]);
     return (
@@ -89,9 +92,9 @@ function CartItemDisplayer({data}) {
                                 </div>
                                 <div className="right">
                                         {/* <input type="text" /> */}
-                                        <button className="btn">-</button>
+                                        <button className="btn" onClick={()=>{dispatch(cartActions.decrement({id:data.productId,variant:index}))}}>-</button>
                                              <p className="qty"> {variantList.amount}</p>
-                                        <button className="btn">+</button>
+                                        <button className="btn" onClick={()=>{dispatch(cartActions.increment({id:data.productId,variant:index}))}}>+</button>
                                 </div>
                             </div>
                         )
@@ -104,7 +107,7 @@ function CartItemDisplayer({data}) {
                         <p>Sub Total:</p>
                         <h2 className="price">${getSubTotal(data,productData)}</h2>
                 </div>
-                <button className="btn" onClick={() => {dispatch(cartActions.remove(data.productId));}}>Remove from cart</button>
+                <button className="btn" onClick={() => {dispatch(cartActions.remove(data.productId))}}>Remove from cart</button>
             </div>
         </div>
     );

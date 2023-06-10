@@ -15,8 +15,8 @@ function Listing() {
         <div className="listing">
             <div className="category">
                 <h2>Category</h2>
-                <ul>
-                <li>
+                <ul className="cat-list">
+                    <li>
                         <Link to="/">All Category</Link>
                     </li>
                     <li>

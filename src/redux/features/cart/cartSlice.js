@@ -30,6 +30,18 @@ const cartSlice = createSlice({
         remove:(state,action)=>{
             const cartItemIndex = state.findIndex((val) => val.productId === action.payload);
             state.splice(cartItemIndex,1);
+        },
+        increment:(state,action)=>{
+            const productId = state.findIndex((cart)=>cart.productId === action.payload.id);
+            state[productId].qty[action.payload.variant].amount += 1;
+            
+        },
+        decrement:(state,action)=>{
+            const productId = state.findIndex((cart)=>cart.productId === action.payload.id);
+            state[productId].qty[action.payload.variant].amount -= 1;
+            if(state[productId].qty[action.payload.variant] <= 0){
+                state[productId].qty[action.payload.variant] = 0;
+            }
         }
     }
 });
