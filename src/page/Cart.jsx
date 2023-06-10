@@ -1,11 +1,34 @@
 import { useDispatch, useSelector } from "react-redux"
 import { cartActions } from "../redux/features/cart/cartSlice";
 import { json } from "react-router-dom";
+import { useMemo } from "react";
+
+
+const getSubTotal = (cartItem,productData)=>{
+    let price = 0;
+    console.log(productData);
+    cartItem.qty.forEach((variant)=>{
+        price += productData.price * variant.amount;
+    })
+    return price;
+}
+
 
 const Cart = () => {
     const cart = useSelector((state) => state.cart);
+    const productData = useSelector((state) => state.products);
     const dispatch = useDispatch();
     const toRender = [...cart].reverse();
+
+    const getPriceTotal = () => {
+        let price = 0;
+        cart.forEach((item)=>{
+            let itemPrice = getSubTotal(item,productData[item.productId - 1]);
+            price += itemPrice;
+        })
+        return price.toFixed(2);
+    }
+    const price = useMemo(()=>{return getPriceTotal()},[cart]);
     return (
         <div className="cart">
             <div className="cart-listing">
@@ -17,10 +40,24 @@ const Cart = () => {
                 {cart.length === 0 && <p>There's no item in your cart</p>}
             </div>
             <div className="cart-action">
-                This is the checkout stuff
+                {/* This is the checkout stuff */}
                 <div className="checkout-panel">
-                    <h2>Total</h2>
-                    <p>$3204.99</p>
+                    <div className="coupon">
+                        <div className="field">
+                            <label htmlFor="coupon-field">Coupon Codes</label>
+                            <input type="text" name="coupon-field"/>
+                        </div>
+                        <button className="btn">Apply</button>
+                    </div>
+                    <div className="footer">
+                        <div className="price-field">
+                            <h2>Total</h2>
+                            <p className="price">${price}</p>
+                        </div>
+                        <div>
+                          <button className="btn">Checkout</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -31,13 +68,7 @@ function CartItemDisplayer({data}) {
 
     const dispatch = useDispatch();
     const productData = useSelector((state) => state.products[data.productId-1]);
-    const getSubTotal = ()=>{
-        let price = 0;
-        data.qty.forEach((variant)=>{
-            price += productData.price * variant.amount;
-        })
-        return price;
-    }
+   
     return (
         <div className="cart-item">
             <div className="img">
@@ -72,7 +103,7 @@ function CartItemDisplayer({data}) {
             <div className="end">
                 <div className="total">
                         <p>Sub Total:</p>
-                        <h2 className="price">${getSubTotal()}</h2>
+                        <h2 className="price">${getSubTotal(data,productData)}</h2>
                 </div>
                 <button className="btn" onClick={() => {dispatch(cartActions.remove(data.productId));}}>Remove from cart</button>
             </div>

@@ -7,11 +7,19 @@ body {
     box-sizing: border-box;
 
 }
- 
+
+.price{
+    // font-weight: bold;
+    font-family: 'Work Sans',sans-serif;
+    opacity: .6;
+    font-weight: 300;
+}
+
 @mixin panel{
     background-color: rgba(243, 240, 240, 0.25);
     border: 1px solid rgba(140, 140, 140, 0.139);
 }
+
 .btn{
     color: white;
     border: none;
@@ -91,12 +99,7 @@ main{
         justify-content: space-between;
         margin-top: 1em;
         align-items: center;
-        .price{
-            // font-weight: bold;
-            font-family: 'Work Sans',sans-serif;
-            opacity: .6;
-            font-weight: 300;
-        }
+       
             .name{
             font-size: 1rem;
             color: rgb(93, 88, 88);
@@ -222,9 +225,7 @@ header{
             }
             .price{
                 // font-weight: bold;
-                font-family: 'Work Sans',sans-serif;
-                opacity: .6;
-                font-weight: 300;
+                @extend .price;
             }
 
             .img img{
@@ -295,7 +296,26 @@ header{
         .checkout-panel{
             @include panel();
             position: sticky;
+            padding: 1em;
             top: 3%;
+        }
+        .coupon{
+            display: flex;
+        }
+
+        .price{
+            font-size: 2rem;
+        }
+
+        .footer{
+            margin-top: calc(1em + 40px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        h2{
+            opacity: .8;
+            font-size: 1.2rem;
         }
     }
 }
