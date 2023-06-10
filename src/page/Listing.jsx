@@ -1,29 +1,38 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux"
 import { cartActions } from "../redux/features/cart/cartSlice";
+import { Link, useParams } from "react-router-dom";
 function Listing() {
 
     const products = useSelector((state)=> state.products);
     const itemInCart = useSelector((state)=> state.cart.length);
+
+
+    const param = useParams();
+    const productsFinal = param.category ? products.filter((prod)=> prod.category.toLowerCase() === param.category.toLowerCase() ) : products;
+    
     return (
         <div className="listing">
             <div className="category">
                 <h2>Category</h2>
                 <ul>
-                    <li>
-                        <a href="">Clothing</a>
+                <li>
+                        <Link to="/">All Category</Link>
                     </li>
                     <li>
-                        <a href="">Accesories</a>
+                        <Link to="/category/clothing">Clothing</Link>
                     </li>
                     <li>
-                        <a href="">Footwear</a>
+                        <Link to="/category/accessories">Accessories</Link>
+                    </li>
+                    <li>
+                        <Link to="/category/footwear">Footwear</Link>
                     </li>
                 </ul>
             </div>
             <div className="product-list">
-                    {products.map((product)=>{
-                        return <ProductList product={product}></ProductList>
+                    {productsFinal.map((product)=>{
+                        return <ProductList key={product.id} product={product}></ProductList>
                     })}
             </div>
         </div>
@@ -51,7 +60,9 @@ function ProductList({product}){
     }
     return (
         <div className="product">
-            <img className="prod-img" src={'https://lzd-img-global.slatic.net/g/p/a1fa48a04c8c30705c9c2ea1bbf6d3d0.jpg_720x720q80.jpg_.webp'} alt="" />
+            <div>
+                <img className="prod-img" src={product.imageSrc || 'https://lzd-img-global.slatic.net/g/p/a1fa48a04c8c30705c9c2ea1bbf6d3d0.jpg_720x720q80.jpg_.webp'} alt="" />
+            </div>
             <div className="prod-data">
                 <h2 className="name">{product.name}</h2>
                 <p className="category">{product.category}</p>

@@ -6,7 +6,6 @@ import { useMemo } from "react";
 
 const getSubTotal = (cartItem,productData)=>{
     let price = 0;
-    console.log(productData);
     cartItem.qty.forEach((variant)=>{
         price += productData.price * variant.amount;
     })
@@ -72,7 +71,7 @@ function CartItemDisplayer({data}) {
     return (
         <div className="cart-item">
             <div className="img">
-                <img src="https://images.squarespace-cdn.com/content/v1/5bf4bf814611a019a7c475f0/1562038085083-DLUD125WWPOUTGYD8Q60/ke17ZwdGBToddI8pDm48kHH9S2ID7_bpupQnTdrPcoF7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0nQwvinDXPV4EYh2MRzm-RRB5rUELEv7EY2n0AZOrEupxpSyqbqKSgmzcCPWV5WMiQ/product%2Bphotography" alt="" className="product-img" />
+                <img src={productData.imageSrc} alt="" className="product-img" />
             </div>
             <div className="center">
                 <div className="info">
