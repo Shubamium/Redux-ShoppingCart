@@ -187,7 +187,7 @@ header{
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 2em;
-   
+    height: 100%;
     .cart-listing{
         background-color: rgba(232, 230, 230, 0.123);
         display: flex;
@@ -287,6 +287,15 @@ header{
                     font-size: .5rem;
                 }
            }
+        }
+    }
+
+    .cart-action{
+        height: 100%;
+        .checkout-panel{
+            @include panel();
+            position: sticky;
+            top: 3%;
         }
     }
 }

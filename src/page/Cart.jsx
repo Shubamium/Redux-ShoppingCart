@@ -18,6 +18,10 @@ const Cart = () => {
             </div>
             <div className="cart-action">
                 This is the checkout stuff
+                <div className="checkout-panel">
+                    <h2>Total</h2>
+                    <p>$3204.99</p>
+                </div>
             </div>
         </div>
     ) 
