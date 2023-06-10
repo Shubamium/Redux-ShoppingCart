@@ -5,10 +5,11 @@ import { json } from "react-router-dom";
 const Cart = () => {
     const cart = useSelector((state) => state.cart);
     const dispatch = useDispatch();
+    const toRender = [...cart].reverse();
     return (
         <div className="cart">
             <div className="cart-listing">
-                {cart && cart.map((data)=>{
+                {cart && toRender.map((data)=>{
                     return (
                       <CartItemDisplayer key={data.productId}  data={data} />
                     )
@@ -25,8 +26,14 @@ const Cart = () => {
 function CartItemDisplayer({data}) {
 
     const dispatch = useDispatch();
-    const productData = useSelector((state) => state.products[data.productId]);
-   
+    const productData = useSelector((state) => state.products[data.productId-1]);
+    const getSubTotal = ()=>{
+        let price = 0;
+        data.qty.forEach((variant)=>{
+            price += productData.price * variant.amount;
+        })
+        return price;
+    }
     return (
         <div className="cart-item">
             <div className="img">
@@ -59,10 +66,9 @@ function CartItemDisplayer({data}) {
                 </div>
             </div>
             <div className="end">
-
                 <div className="total">
                         <p>Sub Total:</p>
-                        <h2 className="price">${productData.price}</h2>
+                        <h2 className="price">${getSubTotal()}</h2>
                 </div>
                 <button className="btn" onClick={() => {dispatch(cartActions.remove(data.productId));}}>Remove from cart</button>
             </div>
