@@ -6,13 +6,27 @@ function Listing() {
     const products = useSelector((state)=> state.products);
     const itemInCart = useSelector((state)=> state.cart.length);
     return (
-        <>
+        <div className="listing">
+            <div className="category">
+                <h2>Category</h2>
+                <ul>
+                    <li>
+                        <a href="">Clothing</a>
+                    </li>
+                    <li>
+                        <a href="">Accesories</a>
+                    </li>
+                    <li>
+                        <a href="">Footwear</a>
+                    </li>
+                </ul>
+            </div>
             <div className="product-list">
                     {products.map((product)=>{
                         return <ProductList product={product}></ProductList>
                     })}
             </div>
-        </>
+        </div>
     )
 }
 

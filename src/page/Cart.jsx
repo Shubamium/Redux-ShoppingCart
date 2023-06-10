@@ -33,25 +33,38 @@ function CartItemDisplayer({data}) {
                 <img src="https://images.squarespace-cdn.com/content/v1/5bf4bf814611a019a7c475f0/1562038085083-DLUD125WWPOUTGYD8Q60/ke17ZwdGBToddI8pDm48kHH9S2ID7_bpupQnTdrPcoF7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0nQwvinDXPV4EYh2MRzm-RRB5rUELEv7EY2n0AZOrEupxpSyqbqKSgmzcCPWV5WMiQ/product%2Bphotography" alt="" className="product-img" />
             </div>
             <div className="center">
-                <h2 className="name">{productData.name}</h2>
-                {data.qty.map((variantList,index) => {
-                    const variantData = productData.variants[variantList.variant];
-                    return (
-                        <div className="shopping-cart" key={index}>
-                            <h3>{variantData.color}</h3>
-                            <p>Size {variantData.size}</p>
-                            <p> {variantList.amount}</p>
-                        </div>
-                    )
-                }
-                )}
-            </div>
-            <button className="btn" onClick={() => {dispatch(cartActions.remove(data.productId));}}>Remove from cart</button>
-            <div className="end">
-                <div className="total">
-                        <p>Sub total:</p>
-                        <h2 className="price">$222</h2>
+                <div className="info">
+                    <h2 className="name">{productData.name}</h2>
+                    <p className="desc">{productData.description}</p>
                 </div>
+                <div className="variant-list">
+                {data.qty.map((variantList,index) => {
+                        const variantData = productData.variants[variantList.variant];
+                        return (
+                            <div className="variant" key={index}>
+                                <div className="left">
+                                    <h3 className="color">{variantData.color}</h3>
+                                    <p>{variantData.size}</p>
+                                </div>
+                                <div className="right">
+                                        {/* <input type="text" /> */}
+                                        <button className="btn">-</button>
+                                             <p className="qty"> {variantList.amount}</p>
+                                        <button className="btn">+</button>
+                                </div>
+                            </div>
+                        )
+                    }
+                )}
+                </div>
+            </div>
+            <div className="end">
+
+                <div className="total">
+                        <p>Sub Total:</p>
+                        <h2 className="price">${productData.price}</h2>
+                </div>
+                <button className="btn" onClick={() => {dispatch(cartActions.remove(data.productId));}}>Remove from cart</button>
             </div>
         </div>
     );
