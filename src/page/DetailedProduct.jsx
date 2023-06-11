@@ -67,9 +67,15 @@ function DetailedProduct(){
                                     })}
                             </div>
                         </div>
-                        
+                        <div className="amount">
+                            <p>Amount:</p>
+                            <button className="btn" onClick={()=>{setQty(prev => prev - 1 <= 0 ? 1 : prev - 1)}}>-</button>
+                                    <p className="qty"> {qty}</p>
+                            <button className="btn" onClick={()=>{setQty(prev => prev + 1)}}>+</button>
+
+                        </div>
                         <div className="pricing-field">
-                            <h2 className="heading">Total</h2>
+                            <h2 className="heading">Price:</h2>
                             <p className="price">${product.price}</p>
                             <button className="btn cart-btn" onClick={handleAdd}>Add to cart</button>
                         </div>
