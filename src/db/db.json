@@ -248,7 +248,250 @@
         ],
         "imageSrc": "../src/assets/product/leather_wallet.jpg"
       }
-    ]
+    ],
+    "reviews": [
+        {
+          "prodId": "1",
+          "reviews": [
+            {
+              "name": "Emily Johnson",
+              "starReview": 4,
+              "review": "The elegant dress exceeded my expectations! The fabric is of high quality, and the fit is perfect. I received many compliments at the special occasion I wore it to."
+            },
+            {
+              "name": "Sophia Mitchell",
+              "starReview": 5,
+              "review": "I absolutely love the elegant dress! The color is vibrant, and the material feels luxurious. It's my go-to dress for special occasions."
+            },
+            {
+              "name": "Olivia Roberts",
+              "starReview": 4,
+              "review": "The elegant dress is stunning! It hugs my curves in all the right places and makes me feel confident. The attention to detail is remarkable."
+            }
+          ]
+        },
+        {
+          "prodId": "2",
+          "reviews": [
+            {
+              "name": "James Thompson",
+              "starReview": 5,
+              "review": "These sports shoes are incredibly comfortable! I wear them for my daily runs, and they provide excellent support. The cushioning is fantastic."
+            },
+            {
+              "name": "Ethan Smith",
+              "starReview": 4,
+              "review": "The sports shoes are versatile and durable. I use them for various activities like hiking and playing basketball. They have great traction and grip."
+            },
+            {
+              "name": "Benjamin Johnson",
+              "starReview": 5,
+              "review": "I'm impressed with the sports shoes' performance. They're lightweight and allow me to move freely. The design is stylish, and I receive compliments on them."
+            }
+          ]
+        },
+        {
+          "prodId": "3",
+          "reviews": [
+            {
+              "name": "Sophia Miller",
+              "starReview": 4,
+              "review": "The vintage watch is a timeless piece that adds a touch of elegance to any outfit. It keeps accurate time, and the craftsmanship is remarkable."
+            },
+            {
+              "name": "Emma Davis",
+              "starReview": 5,
+              "review": "I adore the vintage watch! The silver color goes well with my jewelry, and the design is unique. It's become my favorite accessory."
+            },
+            {
+              "name": "Isabella Thomas",
+              "starReview": 4,
+              "review": "The vintage watch is a conversation starter. I love the gold version; it looks luxurious and adds a sophisticated touch to my outfits."
+            }
+          ]
+        },
+        {
+          "prodId": "4",
+          "reviews": [
+            {
+              "name": "Oliver Wilson",
+              "starReview": 3,
+              "review": "The stylish sunglasses are trendy and provide decent sun protection. However, I found the build quality to be average, and they felt a bit flimsy."
+            },
+            {
+              "name": "Liam Taylor",
+              "starReview": 4,
+              "review": "I'm happy with the stylish sunglasses. They provide good shade and fit well. The lenses are clear, and they suit my style."
+            },
+            {
+              "name": "Noah Anderson",
+              "starReview": 5,
+              "review": "I love these stylish sunglasses! They're comfortable to wear and have excellent UV protection. The black color goes well with any outfit."
+            }
+          ]
+        },
+        {
+          "prodId": "5",
+          "reviews": [
+            {
+              "name": "Ava Brown",
+              "starReview": 5,
+              "review": "The leather handbag is fantastic! It's spacious enough to fit all my essentials, and the craftsmanship is top-notch. I receive compliments wherever I go."
+            },
+            {
+              "name": "Mia Wilson",
+              "starReview": 4,
+              "review": "I'm pleased with the leather handbag. The quality is great, and it's versatile for both casual and formal occasions. The brown color matches well with my outfits."
+            },
+            {
+              "name": "Charlotte Thompson",
+              "starReview": 5,
+              "review": "The leather handbag is a must-have! It's durable, and the design is timeless. I appreciate the attention to detail, such as the sturdy handles."
+            }
+          ]
+        },
+        {
+          "prodId": "6",
+          "reviews": [
+            {
+              "name": "Amelia Clark",
+              "starReview": 5,
+              "review": "The classic t-shirt is comfortable and fits perfectly. It's a versatile piece that goes well with jeans or skirts. I love the soft fabric."
+            },
+            {
+              "name": "Harper Davis",
+              "starReview": 4,
+              "review": "I'm satisfied with the classic t-shirt. It's a wardrobe staple that I can mix and match with various outfits. The black color is my favorite."
+            },
+            {
+              "name": "Evelyn Moore",
+              "starReview": 5,
+              "review": "The classic t-shirt is a great addition to my closet. The material is high quality, and it's easy to care for. I'll be buying more in different colors."
+            }
+          ]
+        },
+        {
+          "prodId": "7",
+          "reviews": [
+            {
+              "name": "Michael Martinez",
+              "starReview": 4,
+              "review": "The casual sneakers are comfortable and stylish. They're suitable for everyday wear and provide good support. The white color looks clean and trendy."
+            },
+            {
+              "name": "William Thompson",
+              "starReview": 5,
+              "review": "I'm impressed with the casual sneakers. They're lightweight and perfect for my daily walks. The black color is sleek, and the fit is great."
+            },
+            {
+              "name": "James Harris",
+              "starReview": 4,
+              "review": "The casual sneakers are my go-to shoes for casual outings. They're easy to slip on, and the gray color matches well with most of my outfits."
+            }
+          ]
+        },
+        {
+          "prodId": "8",
+          "reviews": [
+            {
+              "name": "Olivia Walker",
+              "starReview": 5,
+              "review": "The statement necklace is absolutely stunning! It adds a touch of glamour to any outfit. The gold color looks exquisite and catches the light beautifully."
+            },
+            {
+              "name": "Emily Turner",
+              "starReview": 4,
+              "review": "I'm happy with the statement necklace. It's well-made, and the silver color goes well with my other accessories. It's a statement piece without being too overwhelming."
+            },
+            {
+              "name": "Abigail Clark",
+              "starReview": 5,
+              "review": "The statement necklace is a showstopper! It's the perfect accessory for formal events. The gold color complements my complexion, and the design is unique."
+            }
+          ]
+        },
+        {
+          "prodId": "9",
+          "reviews": [
+            {
+              "name": "Elijah Mitchell",
+              "starReview": 4,
+              "review": "The slim fit jeans are stylish and fit well. They're my go-to jeans for casual outings. The blue color is versatile and goes well with different tops."
+            },
+            {
+              "name": "Alexander Turner",
+              "starReview": 5,
+              "review": "I love the slim fit jeans! The black color is sleek, and the fit is perfect. They're comfortable to wear all day long, and the quality is excellent."
+            },
+            {
+              "name": "Daniel Roberts",
+              "starReview": 4,
+              "review": "The slim fit jeans are a great addition to my wardrobe. The gray color is unique, and the slim fit gives me a modern look. They're comfortable and well-made."
+            }
+          ]
+        },
+        {
+          "prodId": "10",
+          "reviews": [
+            {
+              "name": "Mason Harris",
+              "starReview": 5,
+              "review": "The cozy sweater is my favorite! It's warm and comfortable, perfect for chilly weather. The red color is vibrant, and the fit is cozy."
+            },
+            {
+              "name": "Sebastian Anderson",
+              "starReview": 4,
+              "review": "I'm pleased with the cozy sweater. It's soft and keeps me warm on cold days. The gray color goes well with my other wardrobe pieces."
+            },
+            {
+              "name": "Henry Davis",
+              "starReview": 5,
+              "review": "The cozy sweater is a must-have for winter. It's stylish and keeps me cozy without feeling bulky. The navy color is a nice change from my usual neutrals."
+            }
+          ]
+        },
+        {
+          "prodId": "11",
+          "reviews": [
+            {
+              "name": "Jack Wilson",
+              "starReview": 4,
+              "review": "The bohemian maxi dress is beautiful! The floral print is vibrant and perfect for a boho look. The small size fits me well, and the length is just right."
+            },
+            {
+              "name": "Owen Taylor",
+              "starReview": 5,
+              "review": "I'm in love with the bohemian maxi dress! The striped version is my favorite. It's comfortable, and the medium size flatters my figure. Perfect for summer!"
+            },
+            {
+              "name": "Jackson Thompson",
+              "starReview": 4,
+              "review": "The bohemian maxi dress is my go-to for a laid-back look. The solid color is versatile, and the large size gives me a relaxed fit. It's a wardrobe essential."
+            }
+          ]
+        },
+        {
+          "prodId": "12",
+          "reviews": [
+            {
+              "name": "Lucas Moore",
+              "starReview": 4,
+              "review": "The leather wallet is a great accessory. It's well-crafted, and the black color is sleek. It has enough card slots and compartments for my needs."
+            },
+            {
+              "name": "Carter Turner",
+              "starReview": 5,
+              "review": "I'm satisfied with the leather wallet. The brown color is rich, and the quality is impressive. It's a stylish and practical choice for everyday use."
+            },
+            {
+              "name": "Joseph Davis",
+              "starReview": 4,
+              "review": "The leather wallet is exactly what I was looking for. It's compact yet spacious enough for my essentials. The black color is classic and matches my other accessories."
+            }
+          ]
+        }
+      ]
+    
 }
   
 

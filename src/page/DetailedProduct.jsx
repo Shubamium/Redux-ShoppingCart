@@ -10,7 +10,7 @@ function DetailedProduct(){
     const dispatch = useDispatch();
     const {prodId} = useParams();
     const product = useSelector((state)=>state.products[state.products.findIndex((prod)=> prod.id === prodId)]);
-
+    const reviews = useSelector((state)=>state.reviews[state.reviews.findIndex((reviews) => reviews.prodId === prodId)] );
 
     function handleAdd(){
         try{
@@ -32,6 +32,25 @@ function DetailedProduct(){
                     <h2 className="name">{product.name}</h2>
                     <p className="category">{product.category}</p>
                     <p className="desc">{product.description}</p>
+                    <div className="reviews">
+                        {reviews && reviews.reviews.map((review,index)=>{
+                            return (
+                                 <div className="review" key={index}>
+                                        <div className="img">
+                                                <img className="profile-pic" src="https://www.pngkey.com/png/full/73-730477_first-name-profile-image-placeholder-png.png" alt="" />
+                                        </div>
+                                        <div className="detail">
+                                            <h2 className="reviewer-name">{review.name}</h2>
+                                            <p className="reviewer-text">{review.review}</p>
+                                        </div>
+                                        <div className="score">
+                                            <p>{review.starReview}</p>
+                                            {/* stars */}
+                                        </div>
+                                 </div>
+                            )
+                        })}
+                    </div>
                 </div>
                 <form className="prod-action" onSubmit={(e)=>{e.preventDefault()}}>
                     <div className="floating">
