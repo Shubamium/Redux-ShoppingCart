@@ -33,6 +33,7 @@ function DetailedProduct(){
                     <p className="category">{product.category}</p>
                     <p className="desc">{product.description}</p>
                     <div className="reviews">
+                        <h2>Reviews</h2>
                         {reviews && reviews.reviews.map((review,index)=>{
                             return (
                                  <div className="review" key={index}>
@@ -44,8 +45,9 @@ function DetailedProduct(){
                                             <p className="reviewer-text">{review.review}</p>
                                         </div>
                                         <div className="score">
-                                            <p>{review.starReview}</p>
+                                            <p>{review.starReview} / 5</p>
                                             {/* stars */}
+                                            <Star count={review.starReview}></Star>
                                         </div>
                                  </div>
                             )
@@ -74,6 +76,27 @@ function DetailedProduct(){
                     </div>
                 </form>
             </section>
+        </div>
+    )
+}
+
+
+const starEl = (filled) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+     <polygon id="star" fill={filled ? 'grey' : 'gold'} opacity={filled ? '0.3' : '1'} points="12.5,1.7 15.5,8.8 23.2,9.3 17.3,14.2 18.5,21.3 12.5,17.2 6.5,21.3 7.7,14.2 1.8,9.3 9.5,8.8 "/>
+    </svg>
+);
+function Star({count}){
+    const starAmount = count;
+    if(!count){
+        starAmount = 0;
+    }
+   
+    return (
+        <div className="star" style={{display:'flex',justifyContent:'center'}}>
+            {"a".repeat(5).split('').map((val,index)=>{
+                return starEl(index >= starAmount);
+            })}
         </div>
     )
 }
