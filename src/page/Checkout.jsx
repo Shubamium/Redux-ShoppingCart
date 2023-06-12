@@ -42,7 +42,7 @@ function Checkout() {
                         <p className='price'>${totalPrice}</p>
                     </div>
                     <div className='cta'>
-                       <Link to={'checkout/success'}>
+                       <Link to={'/checkout/success'}>
                        <button className='btn'>Place Order</button>
                        </Link>
                     </div>
@@ -244,7 +244,7 @@ function OrderSummary(){
                 {toRender} 
                 <tr>
                     <td colSpan={2} align='right' className='total'>Price Total:</td>
-                    <td colSpan={2} className='price'> ${totalPrice} </td>
+                    <td colSpan={2} className='price'> ${totalPrice.toFixed(2)} </td>
                 </tr>
         </table>
     )
