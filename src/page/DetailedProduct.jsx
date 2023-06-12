@@ -28,8 +28,7 @@ function DetailedProduct(){
                     <img className="prod-img" src={product.imageSrc || 'https://lzd-img-global.slatic.net/g/p/a1fa48a04c8c30705c9c2ea1bbf6d3d0.jpg_720x720q80.jpg_.webp'} alt="" />
                 </div>
                 <div className="prod-data">
-                        <h2 className="name">{product.name}</h2>
-                   
+                    <h2 className="name">{product.name}</h2>
                     <p className="category">{product.category}</p>
                     <p className="desc">{product.description}</p>
                     <div className="reviews">

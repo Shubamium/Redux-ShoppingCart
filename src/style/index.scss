@@ -518,12 +518,30 @@ header{
 
 #checkout {
     display: grid;
-    grid-template-columns: 1fr 250px;
+    grid-template-columns: 1fr 400px;
+    gap: 2em;
+
+    .page-title{
+        font-size:2rem;
+        opacity: .8;
+        letter-spacing: 1px;
+        // margin: -.3em 0;
+        margin-bottom: -.6em;
+    }
+    .page-desc{
+        opacity: .5;
+        margin: 1em .2em;
+
+    }
     .checkout-form-section{
         @include panel();
         margin: 2em 0;
         padding: 2em;
-
+        & h2{
+            opacity: .5;
+            
+            margin: .5em 0;
+        }
         .form{
             display: flex;
             flex-direction: column;
@@ -544,6 +562,42 @@ header{
                     flex-shrink: 3;
                 }
             }
+        }
+    }
+
+    .payment-info{
+        @include panel();
+        border: 1px solid rgb(216, 216, 216);
+        padding: 1em;
+        border-style: no;
+        width: 100%;
+        td{
+            padding: .2em;
+            // border: 1px solid grey;
+            margin: 0;
+        }
+        th{
+            opacity: .9;
+            background-color: gray;
+            color: rgb(232, 232, 232);
+            border: none;
+        }
+       
+        tr:nth-child(odd){
+            background-color: rgba(224, 224, 224, 0.452);
+        }
+
+        .total{
+            font-weight: bold;
+        }
+    }
+
+
+    .action{
+        .floating{
+            @include panel();
+            position: sticky;
+            top: 5%;
         }
     }
 }
@@ -568,3 +622,6 @@ label{
     margin:.5em 0;
     opacity: .8;
 }
+
+
+

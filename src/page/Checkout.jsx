@@ -8,14 +8,36 @@ function Checkout() {
     return (
         <div id="checkout">
             <div className='order-info'>
-                <h2>Checkout</h2>
+                <h2 className='page-title'>Checkout</h2>
+                <p className='page-desc'>Finalize your order and complete the order! </p>
                 <OrderSummary/>
                 <BillingInfo/>
                 <PaymentInfo/>
                 <ShippingInfo/>
             </div>
             <div className='action'>
+               <div className="floating">
+                <div className="order-notes">
+                    <label htmlFor="">Order Notes (optional)</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
 
+                <div className="all-prices">
+                    <p><span className='field'>Shipping:</span> <span className='price'>$100</span></p>
+                    <p><span className='field'>Discount:</span> <span className='price'>$0</span></p>
+                    <p><span className='field'>VAT:</span> <span className='price'>$1.22</span></p>
+                </div>
+
+                <div className="end">
+                    <div className="prices-total">
+                        <h2>Total</h2>
+                        <p className='price'>$130</p>
+                    </div>
+                    <div className='cta'>
+                        <button className='btn'>Place Order</button>
+                    </div>
+                </div>
+               </div>
             </div>
             
         </div>
@@ -56,7 +78,7 @@ function BillingInfo(){
 function PaymentInfo(){
     return (
         <div className='checkout-form-section'>
-            <h2>Payment Info:</h2>
+            <h2 >Payment Info:</h2>
             <form className='form'>
 
                 <div className="input-field">
@@ -172,12 +194,12 @@ function OrderSummary(){
                               { thisProduct && thisProduct.name}
                         </td>
                         <td>
-                             <span>{thisProduct.variants[cartQty.variant].color}</span> - <span>{thisProduct.variants[cartQty.variant].size}</span> 
+                             <span>{thisProduct.variants[cartQty.variant].color}</span> - <span className='price'>{thisProduct.variants[cartQty.variant].size}</span> 
                         </td>
                         <td>
                             {cartQty.amount}
                         </td>
-                        <td>
+                        <td className='price'>
                            ${thisProduct && price}
                         </td>
                     </tr>
@@ -191,7 +213,7 @@ function OrderSummary(){
     }
     const {totalPrice,toRender} = renderOrderSummary()
     return(
-        <table className='payment-info' border='2px'>
+        <table className='payment-info'>
                 <thead>
                  <h2>Order Summary</h2>
                 </thead>
@@ -211,8 +233,8 @@ function OrderSummary(){
                 </tr>
                 {toRender} 
                 <tr>
-                    <td colSpan={2} align='right'>Price Total:</td>
-                    <td colSpan={2}> ${totalPrice} </td>
+                    <td colSpan={2} align='right' className='total'>Price Total:</td>
+                    <td colSpan={2} className='price'> ${totalPrice} </td>
                 </tr>
         </table>
     )
