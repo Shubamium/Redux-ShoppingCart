@@ -49,6 +49,9 @@ const cartSlice = createSlice({
                     state.splice(productId,1);
                 }               
             }
+        },
+        order:(state,action)=>{
+            state.splice(0,state.length);
         }
     }
 });

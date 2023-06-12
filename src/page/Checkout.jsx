@@ -1,18 +1,30 @@
-import React, { useState } from 'react'
-import { useSelector } from 'react-redux'
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { cartActions } from '../redux/features/cart/cartSlice';
 
 function Checkout() {
 
+    const dispatch = useDispatch();
     const carts = useSelector((state)=>state.cart);
     const {state} = useLocation();
     const navigate = useNavigate();
-    if(carts.length === 0){
-        navigate('/')
-    }
+    useEffect(()=>{
+        if(state === null || carts == null || carts.length === 0){
+            console.log(carts);
+            navigate('/');
+        }
+    },[carts]);
+    
+    if(!state) return <></>;
+
     const shippingFee = (parseFloat(state.price) / 100) * 2;
     const vat = parseFloat((state.price / 100) * 4.5);
     const totalPrice = (parseFloat(state.price) + vat + shippingFee).toFixed(2);
+    
+    function placeOrder(){
+        dispatch(cartActions.order());
+    }
     return (
         <div id="checkout">
             <div className='order-info'>
@@ -43,7 +55,7 @@ function Checkout() {
                     </div>
                     <div className='cta'>
                        <Link to={'/checkout/success'}>
-                       <button className='btn'>Place Order</button>
+                       <button className='btn' onClick={()=>placeOrder()}>Place Order</button>
                        </Link>
                     </div>
                 </div>

@@ -86,8 +86,8 @@ function DetailedProduct(){
 }
 
 
-const starEl = (filled) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+const starEl = (filled,index) => (
+    <svg key={index} xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
      <polygon id="star" fill={filled ? 'grey' : 'gold'} opacity={filled ? '0.3' : '1'} points="12.5,1.7 15.5,8.8 23.2,9.3 17.3,14.2 18.5,21.3 12.5,17.2 6.5,21.3 7.7,14.2 1.8,9.3 9.5,8.8 "/>
     </svg>
 );
@@ -100,7 +100,7 @@ function Star({count}){
     return (
         <div className="star" style={{display:'flex',justifyContent:'center'}}>
             {"a".repeat(5).split('').map((val,index)=>{
-                return starEl(index >= starAmount);
+                return starEl(index >= starAmount,index);
             })}
         </div>
     )
