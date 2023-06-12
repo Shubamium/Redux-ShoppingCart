@@ -539,7 +539,7 @@ header{
         padding: 2em;
         & h2{
             opacity: .5;
-            
+            font-weight: 500;
             margin: .5em 0;
         }
         .form{
@@ -571,6 +571,10 @@ header{
         padding: 1em;
         border-style: no;
         width: 100%;
+        h2{
+            opacity: .5;
+            font-weight: 300;
+        }
         td{
             padding: .2em;
             // border: 1px solid grey;
@@ -598,6 +602,48 @@ header{
             @include panel();
             position: sticky;
             top: 5%;
+            padding: 1.5em;
+            padding-bottom: 1em;
+            .order-notes{
+                margin: .5em 0;
+                label{
+                    opacity: .8;
+                    margin: .5em 0;
+                    font-weight: 400;
+                    display: block;
+                }
+                textarea{
+                    max-height: 50px;
+                    resize: none;
+                    &::placeholder{
+                        opacity: .2;
+                    }
+                }
+            }
+
+            .all-prices{
+                p{
+                    font-size: 1rem;
+                    font-weight: 400;
+                    opacity: .8;
+                }
+            }
+            .end{
+                margin-top: 3em;
+                display: flex;
+                justify-content: space-between;
+                align-items: end;
+
+                .prices-total{
+                    h2{
+                        opacity: .8;
+                        font-size: 1rem;
+                    }
+                    .price{
+                        font-size: 1.5rem;
+                    }
+                }
+            }
         }
     }
 }
@@ -607,7 +653,7 @@ header{
     gap: 1em;
 }
 
-input,select{
+input,select,textarea{
     padding: .5em;
     border: none;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.08);

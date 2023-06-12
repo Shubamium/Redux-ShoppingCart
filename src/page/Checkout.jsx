@@ -18,12 +18,12 @@ function Checkout() {
             <div className='action'>
                <div className="floating">
                 <div className="order-notes">
-                    <label htmlFor="">Order Notes (optional)</label>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <label htmlFor="">Order Notes (Optional)</label>
+                    <textarea name="" id="" cols="30" rows="10" placeholder='Message for the seller. . .'></textarea>
                 </div>
 
                 <div className="all-prices">
-                    <p><span className='field'>Shipping:</span> <span className='price'>$100</span></p>
+                    <p><span className='field'>Shipping Fee:</span> <span className='price'>$2.69</span></p>
                     <p><span className='field'>Discount:</span> <span className='price'>$0</span></p>
                     <p><span className='field'>VAT:</span> <span className='price'>$1.22</span></p>
                 </div>
@@ -31,7 +31,7 @@ function Checkout() {
                 <div className="end">
                     <div className="prices-total">
                         <h2>Total</h2>
-                        <p className='price'>$130</p>
+                        <p className='price'>$130.49</p>
                     </div>
                     <div className='cta'>
                         <button className='btn'>Place Order</button>
