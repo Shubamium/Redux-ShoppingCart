@@ -57,7 +57,7 @@ const Cart = () => {
                             <p className="price">${price}</p>
                         </div>
                         <div>
-                         <Link to={'/checkout'}> <button className="btn" disabled={cart.length === 0}>Checkout</button></Link>
+                         <Link to={'/checkout'} state={{price}}> <button className="btn" disabled={cart.length === 0}>Checkout</button></Link>
                         </div>
                     </div>
                 </div>

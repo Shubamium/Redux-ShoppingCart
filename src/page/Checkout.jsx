@@ -1,10 +1,18 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 function Checkout() {
 
     const carts = useSelector((state)=>state.cart);
-
+    const {state} = useLocation();
+    const navigate = useNavigate();
+    if(carts.length === 0){
+        navigate('/')
+    }
+    const shippingFee = (parseFloat(state.price) / 100) * 2;
+    const vat = parseFloat((state.price / 100) * 4.5);
+    const totalPrice = (parseFloat(state.price) + vat + shippingFee).toFixed(2);
     return (
         <div id="checkout">
             <div className='order-info'>
@@ -23,18 +31,20 @@ function Checkout() {
                 </div>
 
                 <div className="all-prices">
-                    <p><span className='field'>Shipping Fee:</span> <span className='price'>$2.69</span></p>
+                    <p><span className='field'>Shipping Fee:</span> <span className='price'>${shippingFee.toFixed(2)}</span></p>
                     <p><span className='field'>Discount:</span> <span className='price'>$0</span></p>
-                    <p><span className='field'>VAT:</span> <span className='price'>$1.22</span></p>
+                    <p><span className='field'>VAT:</span> <span className='price'>${vat.toFixed(2)}</span></p>
                 </div>
 
                 <div className="end">
                     <div className="prices-total">
                         <h2>Total</h2>
-                        <p className='price'>$130.49</p>
+                        <p className='price'>${totalPrice}</p>
                     </div>
                     <div className='cta'>
-                        <button className='btn'>Place Order</button>
+                       <Link to={'checkout/success'}>
+                       <button className='btn'>Place Order</button>
+                       </Link>
                     </div>
                 </div>
                </div>
@@ -187,7 +197,7 @@ function OrderSummary(){
             const thisProduct = getProductData(cart.productId);
             const data = cart.qty.map((cartQty,index)=> {
                 let price = (thisProduct.price*cartQty.amount).toFixed(2);
-                totalPrice += parseInt(price);
+                totalPrice += parseFloat(price);
                 return (
                     <tr key={index} className='order-summary'>
                         <td>
