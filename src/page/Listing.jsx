@@ -70,7 +70,7 @@ function ProductList({product}){
             </div>
             <form className="prod-footer" onSubmit={(e)=>{e.preventDefault()}}>
                     <p className="price">${product.price}</p>
-                    <Link to={`/product/${product.id}`}><button className="btn cart-btn" >Add to cart</button></Link>
+                    <Link to={`/product/${product.id}`}><button className="btn cart-btn" >Buy</button></Link>
             </form>
             {/* <p>{product.variants[0].size}</p> */}
         </div>

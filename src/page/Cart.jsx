@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux"
 import { cartActions } from "../redux/features/cart/cartSlice";
-import { json } from "react-router-dom";
+import { Link, json } from "react-router-dom";
 import { useMemo } from "react";
 
 
@@ -78,7 +78,9 @@ function CartItemDisplayer({data}) {
             </div>
             <div className="center">
                 <div className="info">
-                    <h2 className="name">{productData.name}</h2>
+                     <Link to={`/product/${data.productId}`}>
+                        <h2 className="name">{productData.name}</h2>
+                    </Link>
                     <p className="desc">{productData.description}</p>
                 </div>
                 <div className="variant-list">
@@ -89,7 +91,7 @@ function CartItemDisplayer({data}) {
                                 <div className="left">
                                     <h3 className="color">{variantData.color}</h3>
                                     <p>{variantData.size}</p>
-                                </div>
+                                </div> 
                                 <div className="right">
                                         {/* <input type="text" /> */}
                                         <button className="btn" onClick={()=>{dispatch(cartActions.decrement({id:data.productId,variant:index}))}}>-</button>
