@@ -20,7 +20,7 @@
             "size": "Large"
           }
         ],
-        "imageSrc": "../src/assets/product/Elegant_Dress.jpg"
+        "imageSrc": "https://i.ibb.co/SDgjRKt/Elegant-Dress.png"
       },
       {
         "id": "2",
@@ -42,7 +42,7 @@
             "size": "11"
           }
         ],
-        "imageSrc": "../src/assets/product/Sport_Shoes.jpg"
+        "imageSrc": "https://i.ibb.co/YR5dV4f/Sport-Shoes.jpg"
       },
       {
         "id": "3",
@@ -60,7 +60,7 @@
             "size": "One Size"
           }
         ],
-        "imageSrc": "../src/assets/product/vintage_watch.jpg"
+        "imageSrc": "https://i.ibb.co/hFG8QXc/vintage-watch.jpg"
       },
       {
         "id": "4",
@@ -82,7 +82,7 @@
             "size": "One Size"
           }
         ],
-        "imageSrc": "../src/assets/product/stylish_sunglasses.jpg"
+        "imageSrc": "https://i.ibb.co/x3PR5hr/stylish-sunglasses.jpg"
       },
       {
         "id": "5",
@@ -100,7 +100,7 @@
             "size": "One Size"
           }
         ],
-        "imageSrc": "../src/assets/product/leather_handbag.jpg"
+        "imageSrc": "https://i.ibb.co/vHhRR9t/leather-handbag.jpg"
       },
       {
         "id": "6",
@@ -122,7 +122,7 @@
             "size": "Large"
           }
         ],
-        "imageSrc": "../src/assets/product/classic_tshirt.jpg"
+        "imageSrc": "https://i.ibb.co/cTdt6Vc/classic-tshirt.jpg"
       },
       {
         "id": "7",
@@ -144,7 +144,7 @@
             "size": "10"
           }
         ],
-        "imageSrc": "../src/assets/product/casual_sneakers.jpg"
+        "imageSrc": "https://i.ibb.co/sKj9ZpF/casual-sneakers.jpg"
       },
       {
         "id": "8",
@@ -162,7 +162,7 @@
             "size": "One Size"
           }
         ],
-        "imageSrc": "../src/assets/product/statement_necklace.jpg"
+        "imageSrc": "https://i.ibb.co/s3rxhd4/statement-necklace.jpg"
       },
       {
         "id": "9",
@@ -184,7 +184,7 @@
             "size": "32Wx34L"
           }
         ],
-        "imageSrc": "../src/assets/product/slim_fit_jeans.jpg"
+        "imageSrc": "https://i.ibb.co/xDtQDdg/slim-fit-jeans.jpg"
       },
       {
         "id": "10",
@@ -206,7 +206,7 @@
             "size": "Large"
           }
         ],
-        "imageSrc": "../src/assets/product/cozy_sweater.jpg"
+        "imageSrc": "https://i.ibb.co/TcySmyn/cozy-sweater.jpg"
       },
       {
         "id": "11",
@@ -228,7 +228,7 @@
             "size": "Large"
           }
         ],
-        "imageSrc": "../src/assets/product/bohemian_maxi_dress.jpg"
+        "imageSrc": "https://i.ibb.co/T15F3P6/bohemian-maxi-dress.jpg"
       },
       {
         "id": "12",
@@ -246,7 +246,7 @@
             "size": "One Size"
           }
         ],
-        "imageSrc": "../src/assets/product/leather_wallet.jpg"
+        "imageSrc": "https://i.ibb.co/vHhRR9t/leather-handbag.jpg"
       }
     ],
     "reviews": [
